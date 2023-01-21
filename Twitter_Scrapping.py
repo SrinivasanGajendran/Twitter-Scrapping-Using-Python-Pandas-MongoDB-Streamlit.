@@ -24,7 +24,7 @@ def Create():
 
 # Checking Whether the File Exist Or Not.
 def File_Check():
-    file_exist = os.path.exists('D:/Practice/user-tweets.csv')
+    file_exist = os.path.exists('D:/python/pythonProject/Twitter_Scrap/user-tweets.csv')
     if file_exist == False:
         Create()
     else:
@@ -37,8 +37,8 @@ def filter_data():
     for i,tweet in enumerate(sntwitter.TwitterSearchScraper(f'{keyword}').get_items()):
         if i > tweet_count:
             break
-        t = time.localtime()
-        current_time = time.strftime("%H:%M:%S", t)
+        #t = time.localtime()
+        #current_time = time.strftime("%H:%M:%S", t)
         tweets_list1.append([tweet.date, tweet.id, tweet.content, tweet.user.username, tweet.lang])
     return tweets_list1
 
@@ -51,7 +51,7 @@ def Append():
 #Checking For Duplicate Values.
 def check_Duplicate():
     Append()
-    check = pd.read_csv('D:/Practice/user-tweets.csv')
+    check = pd.read_csv('D:/python/pythonProject/Twitter_Scrap/user-tweets.csv')
     df1 = check.drop_duplicates(keep='first')
     df1.to_csv('user-tweets.csv', sep=',', index=False, header=True)
 
@@ -74,14 +74,14 @@ def upload_to_DB():
     if checkExistence_DB(DB_NAME="mydatabase", client=myclient) == True:
         db = myclient["mydatabase"]
         COLLECTION_NAME = keyword
-        df1 = pd.read_csv('D:/Practice/show_value.csv')
+        df1 = pd.read_csv('D:/python/pythonProject/Twitter_Scrap/show_value.csv')
         collection = db[COLLECTION_NAME+"_"+str(current_time)+"_"+str(len(df1.values))+"_"+"Records Created"]
         for ind, row in df1.iterrows():
             x = collection.insert_many([row.to_dict()])
     else:
         db = myclient["mydatabase"]
         COLLECTION_NAME = keyword
-        df2 = pd.read_csv('D:/Practice/show_value.csv')
+        df2 = pd.read_csv('D:/python/pythonProject/Twitter_Scrap/show_value.csv')
         collection = db[COLLECTION_NAME+"_"+str(current_time)+"_"+str(len(df2.values))+" - Records Created"]
         for ind, row in df2.iterrows():
             x = collection.insert_many([row.to_dict()])
