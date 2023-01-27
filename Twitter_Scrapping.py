@@ -12,7 +12,7 @@ with header:
     st.title("Twitter Scrapping Using snscrape with python")
     st.header("To Extract Enter The Values")
     st.markdown("""Format for input should be : "**its the elephant since:2020-06-01 until:2020-07-31** """)
-    keyword = st.text_input("Username")
+    keyword = st.text_input("Username","its the elephant since:2020-06-01 until:2020-07-31)
     tweet_count = st.number_input("Tweet Count",min_value=None,max_value=None)
     current_time = time.ctime()
 
