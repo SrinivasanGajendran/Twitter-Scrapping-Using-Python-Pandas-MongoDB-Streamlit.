@@ -1,12 +1,17 @@
 # Capstone_Project_21-01-2023
 # Twitter Scrapping Using Python, Pandas, MongoDB & Streamlit.
+# IDE - Pycharm
 
 Our Task is to create a twitter scrapper using Python, MongoDB, Pandas and Streamlit.
 
-At the beginning stage we created a header container where we used to declare the Title, Header, keyword streamlit. 
+Packages used:
+Streamlit, Pandas, Snscrape, Pymongo(Used to work in MongoDb). 
 
-Then I have created a functions for filtering the data **filter_data()** from Twitter then creating a data frame for it then appending it in a CSV file.
-Before that we should make sure that the CSV file is already created. If not then it will create a CSV file then we are checking for any kind of duplicate data in CSV file if so we will remove it.
+First stage we created a header container where we used to declare the Title, Header, and the user input using streamlit. 
+
+Then I have created a functions for filtering the data **filter_data()** from Twitter then creating a data frame for it and then appending it in a CSV file.
+Before that we should make sure that the CSV file is already created or not for that we use **File_Check() & Create()**.
+If its not present then it will create a CSV file at the location where program is presented. we are checking for any kind of duplicate data in CSV file if so we will remove it for that we will use **Check_Duplicate()**.
 
 Now we have filtered the data from Twitter and stored in a CSV file.
 
