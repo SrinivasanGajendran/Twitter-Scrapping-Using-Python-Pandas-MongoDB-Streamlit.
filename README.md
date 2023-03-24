@@ -25,3 +25,9 @@ Now we have to create buttons for the web page. we Will be creating 4 buttons Su
 2.) Show_DF will display the DataFrame filtered at the moment in the browser.
 3.) Upload_DB will upload the filtred data into the Mongo_DB which we created.
 4.) Download Button will give us the option to download the data into CSV as well as JSON Format.
+
+
+
+
+![Streamlit Front Page](https://user-images.githubusercontent.com/46883734/227435430-e8c517a4-86c0-43ae-8acf-95b075d36d9f.png)
+
