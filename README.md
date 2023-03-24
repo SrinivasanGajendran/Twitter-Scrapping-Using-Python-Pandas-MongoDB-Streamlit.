@@ -28,6 +28,5 @@ Now we have to create buttons for the web page. we Will be creating 4 buttons Su
 
 
 
-
-![Streamlit Front Page](https://user-images.githubusercontent.com/46883734/227435430-e8c517a4-86c0-43ae-8acf-95b075d36d9f.png)
+![Screenshot (31)](https://user-images.githubusercontent.com/46883734/227435795-f344680b-782b-48d1-8a81-de6dd189a453.png)
 
